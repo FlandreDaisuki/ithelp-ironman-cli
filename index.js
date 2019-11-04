@@ -20,7 +20,7 @@ const replacePathVariable = (name, { author, username, title }) => {
   return [name]
     .map((n) => n.replace(/%title%/g, title))
     .map((n) => n.replace(/%author%/g, author))
-    .map((n) => n.replace(/%username%/g, username))
+    .map((n) => n.replace(/%user%/g, username))
     .map((n) => path.normalize(n))[0];
 };
 const replaceFilenameVariable = (name, { author, username, title }) => {

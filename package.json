@@ -1,6 +1,6 @@
 {
   "name": "ithelp-ironman-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "下載、打包 iT 邦幫忙鐵人賽 的命令列工具",
   "main": "index.js",
   "bin": {

@@ -80,12 +80,12 @@ module.exports = async(cli) => {
     const relativeParsedPathName = path.relative(process.cwd(), parsedPath.name);
 
     serveOptions.sourceDir = cli.flags.dir;
-    if ([/%title%/g, /%author%/g, /%username%/g].some((re) => re.test(cli.flags.dir))) {
+    if ([/%title%/g, /%author%/g, /%user%/g].some((re) => re.test(cli.flags.dir))) {
       print.warn(`檔案 <路徑> 無法得知 --dir 的變數，使用 '${relativeParsedPathName}' 作為資料夾名稱`);
       serveOptions.sourceDir = relativeParsedPathName;
     }
 
-    if ([/%title%/g, /%author%/g, /%username%/g].some((re) => re.test(cli.flags.webRoot))) {
+    if ([/%title%/g, /%author%/g, /%user%/g].some((re) => re.test(cli.flags.webRoot))) {
       print.warn(`檔案 <路徑> 無法得知變數，使用 '${path.join(relativeParsedPathName, 'www')}' 作為頁面根目錄`);
       serveOptions.dest = path.join(relativeParsedPathName, 'www');
     }
@@ -104,7 +104,7 @@ module.exports = async(cli) => {
 
     const relativePath = path.relative(process.cwd(), cli.dir);
 
-    if ([/%title%/g, /%author%/g, /%username%/g].some((re) => re.test(cli.flags.dir))) {
+    if ([/%title%/g, /%author%/g, /%user%/g].some((re) => re.test(cli.flags.dir))) {
       if (cli.flags.dir !== '%title%') {
         // 預設就不用警告了
         print.warn('資料夾 <路徑> 無法得知 --dir 的變數，故無效');
@@ -114,7 +114,7 @@ module.exports = async(cli) => {
     }
     serveOptions.sourceDir = relativePath;
 
-    if ([/%title%/g, /%author%/g, /%username%/g].some((re) => re.test(cli.flags.webRoot))) {
+    if ([/%title%/g, /%author%/g, /%user%/g].some((re) => re.test(cli.flags.webRoot))) {
       print.warn(`資料夾 <路徑> 無法得知變數，使用 '${path.join(relativePath, 'www')}' 作為頁面根目錄`);
       serveOptions.dest = path.join(relativePath, 'www');
     } else {
