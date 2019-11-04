@@ -1,0 +1,16 @@
+{
+    "eslint.autoFixOnSave": true,
+    "cSpell.ignoreWords": [
+        "multiline",
+        "paren",
+        "vuepress"
+    ],
+    "cSpell.words": [
+        "cmds",
+        "filenamify",
+        "frontmatter",
+        "ironman",
+        "ithelp",
+        "ithome"
+    ]
+}

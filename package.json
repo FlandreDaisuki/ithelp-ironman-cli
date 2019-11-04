@@ -1,0 +1,35 @@
+{
+  "name": "ithelp-ironman-cli",
+  "version": "0.1.0",
+  "description": "下載、打包 iT 邦幫忙鐵人賽 的命令列工具",
+  "main": "index.js",
+  "bin": {
+    "ithelp-ironman": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlandreDaisuki/ithelp-ironman-cli.git"
+  },
+  "author": "FlandreDaisuki",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^3.1.1",
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.3",
+    "debug": "^4.1.1",
+    "extract-zip": "^1.6.7",
+    "filenamify": "^4.1.0",
+    "fs-extra": "^8.1.0",
+    "meow": "^5.0.0",
+    "node-fetch": "^2.6.0",
+    "turndown": "^5.0.3",
+    "turndown-plugin-gfm": "^1.0.2",
+    "vuepress": "^1.2.0"
+  },
+  "devDependencies": {
+    "@vuepress/theme-default": "^1.2.0"
+  }
+}
